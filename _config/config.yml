@@ -1,0 +1,13 @@
+---
+Name: metatags
+After:
+  - 'framework/*'
+  - 'cms/*'
+---
+SiteTree:
+  extensions:
+    - arillo\metatags\MetaTagsExtension
+
+SiteConfig:
+  extensions:
+    - arillo\metatags\MetaTagsExtension
