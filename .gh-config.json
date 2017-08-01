@@ -1,0 +1,23 @@
+{
+  "Readme.md": {
+    "page": {
+      "layout": "index",
+      "theme": "blue",
+      "title": "SilverStripe Elements",
+      "intro": "Customizable layout elements for the SilverStripe CMS"
+    }
+  },
+
+  "page": {
+    "silverstripe": true,
+    "metaDescription": "Customizable layout elements for the SilverStripe CMS",
+    "metaImage": "http://assets.arillo.net/gh-pages-share-img.png"
+  },
+
+  "menu": false,
+  "projectBase": "/silverstripe-metatags",
+  "projectUrl": "https://arillo.github.io/silverstripe-metatags/",
+  "githubLink": "https://github.com/arillo/silverstripe-metatags",
+  "licenseLink": "https://github.com/arillo/silverstripe-metatags/blob/master/License.md",
+  "licenseType": "MIT"
+}
