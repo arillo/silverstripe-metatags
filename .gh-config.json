@@ -3,14 +3,14 @@
     "page": {
       "layout": "index",
       "theme": "blue",
-      "title": "SilverStripe Elements",
-      "intro": "Customizable layout elements for the SilverStripe CMS"
+      "title": "SilverStripe Metatags",
+      "intro": "Better metatags for your SilverStripe Projects."
     }
   },
 
   "page": {
     "silverstripe": true,
-    "metaDescription": "Customizable layout elements for the SilverStripe CMS",
+    "metaDescription": "Better metatags for your SilverStripe Projects.",
     "metaImage": "http://assets.arillo.net/gh-pages-share-img.png"
   },
 
