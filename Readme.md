@@ -40,7 +40,7 @@ Include the template in your `<head>`:
 </head>
 ```
 
-Be sure **not** to include `$MetaTags` in your `<head>`, the module includes it in the default template. To customize the rendering of the metatags check copy the template `MetaTagsX.ss` to your project theme.
+Be sure **not** to include `$MetaTags` in your `<head>`, the module includes it in the default template. To customize the rendering of the metatags copy the template `MetaTagsX.ss` to your project theme.
 
 ### Recommended
 
