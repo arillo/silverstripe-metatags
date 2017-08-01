@@ -40,7 +40,9 @@ Include the template in your `<head>`:
 </head>
 ```
 
-Be sure **not** to include `$MetaTags` in your `<head>`, the module includes it in the default template. To customize the rendering of the metatags copy the template `MetaTagsX.ss` to your project theme. Why the X? Because `$MetaTags` was taken by the SilverStripe default metatags =).
+Be sure **not** to include `$MetaTags` in your `<head>`, the module includes it in the default template. To customize the rendering of the metatags copy the template `MetaTagsX.ss` to your project theme.
+
+Why the X? Because `$MetaTags` was taken by the SilverStripe default metatags =).
 
 ### Recommended
 
