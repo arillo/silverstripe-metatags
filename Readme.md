@@ -36,7 +36,7 @@ Include the template in your `<head>`:
 
 ```html
 <head>
-  <% include $MetaTagsX %>
+  $MetaTagsX
 </head>
 ```
 
