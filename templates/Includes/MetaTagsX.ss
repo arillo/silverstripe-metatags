@@ -24,6 +24,6 @@ $MetaTags(false)
 <% end_if %>
 
 <% if $MetaDescription %>
-  <meta property="og:description" content="$MetaDescription">
-  <meta name="twitter:description" content="$MetaDescription">
+  <meta property="og:description" content="$MetaDescription.ATT">
+  <meta name="twitter:description" content="$MetaDescription.ATT">
 <% end_if %>
