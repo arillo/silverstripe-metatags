@@ -8,6 +8,7 @@ use \SSViewer;
 use \ContentController;
 use \UploadField;
 use \FieldList;
+use \i18n;
 
 class MetaTagsExtension extends DataExtension {
 
@@ -51,7 +52,7 @@ class MetaTagsExtension extends DataExtension {
 
 		return $this->owner->customise(array(
 			'MetaTitle' => $title,
-			'ContentLocale' => $cc->ContentLocale()
+			'ContentLocale' => i18n::get_locale()
 		))->renderWith('MetaTagsX');
 	}
 
