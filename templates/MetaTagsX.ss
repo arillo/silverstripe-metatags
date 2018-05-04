@@ -12,13 +12,13 @@ $MetaTags(false)
 <meta name="twitter:url" content="$AbsoluteLink">
 
 <% if $MetaImage %>
-  <meta property="og:image" content="$MetaImage.CroppedImage(1200,630).AbsoluteURL">
-  <meta name="twitter:image" content="$MetaImage.CroppedImage(1200,630).AbsoluteURL">
+  <meta property="og:image" content="$MetaImage.Fill(1200,630).AbsoluteURL">
+  <meta name="twitter:image" content="$MetaImage.Fill(1200,630).AbsoluteURL">
   <meta name="twitter:card" content="summary_large_image">
 <% else_if $SiteConfig.MetaImage %>
   <% with $SiteConfig %>
-    <meta property="og:image" content="$MetaImage.CroppedImage(1200,630).AbsoluteURL">
-    <meta name="twitter:image" content="$MetaImage.CroppedImage(1200,630).AbsoluteURL">
+    <meta property="og:image" content="$MetaImage.Fill(1200,630).AbsoluteURL">
+    <meta name="twitter:image" content="$MetaImage.Fill(1200,630).AbsoluteURL">
     <meta name="twitter:card" content="summary_large_image">
   <% end_with %>
 <% end_if %>

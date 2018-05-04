@@ -8,6 +8,12 @@ Better metatags for your SilverStripe Projects.
 
 The module will add a `$MetaImage` to each page and a fallback `$MetaImage` to the `$SiteConfig` that will be used if no image is defined on a particular page (to avoid this behavior do not fill in the `$SiteConfig.MetaImage` in the CMS). It will automatically generate [OpenGraph](http://ogp.me/) and [Twitter](https://dev.twitter.com/cards/getting-started) meta tags based on pages `$MetaDescription`.
 
+### Requirements
+
+SilverStripe CMS ^4.0
+
+For a SilverStripe 3.x compatible version of this module, please see the [1 branch, or 0.x release line](https://github.com/arillo/silverstripe-metatags/tree/1.x).
+
 ## Usage
 
 Install with composer:
@@ -25,7 +31,7 @@ git clone git@github.com:arillo/silverstripe-metatags.git
 Configure the extension:
 
 ```yml
-MetaTagsExtension:
+Arillo\MetaTags\MetaTagsExtension:
   titles_by_pagetype:
     Default: $Title / $SiteConfig.Title # Define the default <title> tag pattern. (Defaults to $Title)
     HomePage: $Title                    # Exception for the HomePage page-type

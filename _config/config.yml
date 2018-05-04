@@ -1,13 +1,10 @@
 ---
 Name: metatags
-After:
-  - 'framework/*'
-  - 'cms/*'
 ---
-SiteTree:
+SilverStripe\CMS\Model\SiteTree:
   extensions:
-    - arillo\metatags\MetaTagsExtension
+    - Arillo\MetaTags\MetaTagsExtension
 
-SiteConfig:
+SilverStripe\SiteConfig\SiteConfig:
   extensions:
-    - arillo\metatags\MetaTagsExtension
+    - Arillo\MetaTags\MetaTagsExtension
