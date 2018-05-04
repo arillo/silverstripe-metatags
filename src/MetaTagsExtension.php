@@ -16,6 +16,20 @@ class MetaTagsExtension extends DataExtension
         'MetaImage' => Image::class,
     ];
 
+    public static function prepare_cms_fields(
+        FieldList $fields,
+        string $tab = 'Root.Meta'
+    ) {
+        if ($medaDesc = $fields->dataFieldByName('MetaDescription'))
+        {
+            $fields->removeByName('Metadata');
+            $fields->removeByName('MetaDescription');
+            $fields->addFieldToTab($tab, $medaDesc);
+        }
+
+        return $fields;
+    }
+
     public function updateCMSFields(FieldList $fields)
     {
         $upload = UploadField::create('MetaImage', _t(__CLASS__ .'.MetaImage', 'MetaImage'));

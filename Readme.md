@@ -56,17 +56,12 @@ Move the `MetaDescription` field inside the Meta Tab:
 
 ```php
 <?php
+use Arillo\MetaTags\MetaTagsExtension;
 class Page extends SiteTree
 {
     public function getCMSFields() {
-        $fields = parent::getCMSFields();
-
-        $medaDesc = $fields->dataFieldByName('MetaDescription');
-        $fields->removeByName('Metadata');
-        $fields->removeByName('MetaDescription');
-        $fields->addFieldToTab('Root.Meta', $medaDesc);
-
-        return $fields;
+        // move meta fields
+        return MetaTagsExtension::prepare_cms_fields(parent::getCMSFields());
     }
 }
 ```
