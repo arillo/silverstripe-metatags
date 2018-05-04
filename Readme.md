@@ -1,4 +1,4 @@
-# arillo\metatags
+# Arillo\MetaTags
 
 [![Latest Stable Version](https://poser.pugx.org/arillo/silverstripe-metatags/v/stable?format=flat)](https://packagist.org/packages/arillo/silverstripe-metatags)
 &nbsp;
