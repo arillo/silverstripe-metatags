@@ -12,9 +12,15 @@ use SilverStripe\i18n\i18n;
 
 class MetaTagsExtension extends DataExtension
 {
-    private static $has_one = [
-        'MetaImage' => Image::class,
-    ];
+    private static
+        $has_one = [
+            'MetaImage' => Image::class,
+        ],
+
+        $owns = [
+            'MetaImage',
+        ]
+    ;
 
     public static function prepare_cms_fields(
         FieldList $fields,
