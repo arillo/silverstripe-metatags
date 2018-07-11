@@ -4,7 +4,7 @@
 $MetaTags(false)
 
 <meta property="og:title" content="$MetaTitle">
-<meta property="og:locale" content="$ContentLocale">
+<meta property="og:locale" content="$CurrentLocale">
 <meta property="og:type" content="website">
 <meta property="og:url" content="$AbsoluteLink">
 
