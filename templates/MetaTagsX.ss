@@ -1,14 +1,14 @@
 <% if $MetaTitle %>
-  <title>$MetaTitle</title>
+  <title>$MetaTitle.RAW</title>
 <% end_if %>
 $MetaTags(false)
 
-<meta property="og:title" content="$MetaTitle">
+<meta property="og:title" content="$MetaTitle.RAW">
 <meta property="og:locale" content="$ContentLocale">
 <meta property="og:type" content="website">
 <meta property="og:url" content="$AbsoluteLink">
 
-<meta name="twitter:title" content="$MetaTitle">
+<meta name="twitter:title" content="$MetaTitle.RAW">
 <meta name="twitter:url" content="$AbsoluteLink">
 
 <% if $MetaImage %>
