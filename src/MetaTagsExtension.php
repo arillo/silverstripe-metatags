@@ -12,6 +12,8 @@ use SilverStripe\i18n\i18n;
 
 class MetaTagsExtension extends DataExtension
 {
+    const TAB_NAME = 'Root.Meta';
+
     private static
         $has_one = [
             'MetaImage' => Image::class,
@@ -24,7 +26,7 @@ class MetaTagsExtension extends DataExtension
 
     public static function prepare_cms_fields(
         FieldList $fields,
-        string $tab = 'Root.Meta'
+        string $tab = self::TAB_NAME
     ) {
         if ($medaDesc = $fields->dataFieldByName('MetaDescription'))
         {
@@ -38,14 +40,14 @@ class MetaTagsExtension extends DataExtension
 
     public function updateCMSFields(FieldList $fields)
     {
-        $upload = UploadField::create('MetaImage', _t(__CLASS__ .'.MetaImage', 'MetaImage'));
+        $upload = UploadField::create('MetaImage', _t(__CLASS__ .'.MetaImage', 'Meta image'));
         $upload
             ->getValidator()
             ->setAllowedExtensions(['jpeg','jpg','png'])
         ;
 
         $upload->setFolderName('MetaImages');
-        $fields->addFieldToTab('Root.Meta', $upload);
+        $fields->addFieldToTab(self::TAB_NAME, $upload);
         return $fields;
     }
 
