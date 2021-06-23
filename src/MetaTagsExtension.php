@@ -4,7 +4,7 @@ namespace Arillo\MetaTags;
 use SilverStripe\ORM\DataExtension;
 use Silverstripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\View\SSViewer;
@@ -65,7 +65,8 @@ class MetaTagsExtension extends DataExtension
             __CLASS__,
             'titles_by_pagetype'
         );
-        $titleTemplate = '$Title';
+        $titleTemplate =
+            '<% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %>';
 
         if (isset($titlesByPagetype['Default'])) {
             $titleTemplate = $titlesByPagetype['Default'];
