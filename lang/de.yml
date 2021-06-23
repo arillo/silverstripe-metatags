@@ -1,3 +1,5 @@
 de:
   Arillo\MetaTags\MetaTagsExtension:
+    MetaTitle: 'Meta-Titel'
+    MetaDescription: 'Meta-Beschreibung'
     MetaImage: 'Meta-Bild'
