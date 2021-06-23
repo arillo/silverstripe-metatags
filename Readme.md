@@ -33,8 +33,8 @@ Configure the extension:
 ```yml
 Arillo\MetaTags\MetaTagsExtension:
   titles_by_pagetype:
-    Default: $Title / $SiteConfig.Title # Define the default <title> tag pattern. (Defaults to $Title)
-    HomePage: $Title                    # Exception for the HomePage page-type
+    Default: <% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> / $SiteConfig.Title # Define the default <title> tag pattern. (Defaults to $Title)
+    HomePage: <% if $MetaTitle %>$MetaTitle<% else %>$Title<% end_if %>                    # Exception for the HomePage page-type
     ProductsPage: $Item.Title           # Pattern for a DataObject
 ```
 
