@@ -15,15 +15,23 @@
             "email": "sf@arillo.net"
         }
     ],
-    "extra": {
-        "installer-name": "metatags"
+    "require": {
+        "silverstripe/vendor-plugin": "^3.0",
+        "silverstripe/cms": "^6.0"
     },
     "autoload": {
         "psr-4": {
             "Arillo\\MetaTags\\": "src/"
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "2.0.x-dev"
+        }
+    },
     "support": {
         "issues": "https://github.com/arillo/silverstripe-metatags/issues"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

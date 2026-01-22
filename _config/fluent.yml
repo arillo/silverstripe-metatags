@@ -1,0 +1,18 @@
+---
+Name: metatags-fluent
+Only:
+  moduleexists: tractorcow/silverstripe-fluent
+After:
+  - '#fluentcms-pages'
+---
+# Add MetaTitle and MetaDescription to the list of translated fields
+# This uses field_include to ADD these fields without replacing existing translate behavior
+SilverStripe\CMS\Model\SiteTree:
+  field_include:
+    - MetaTitle
+    - MetaDescription
+
+SilverStripe\SiteConfig\SiteConfig:
+  field_include:
+    - MetaTitle
+    - MetaDescription
