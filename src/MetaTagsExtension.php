@@ -8,7 +8,8 @@ use SilverStripe\Forms\FieldList;
 use SilverStripe\Forms\TextField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Core\Config\Config;
-use SilverStripe\View\SSViewer;
+use SilverStripe\TemplateEngine\SSTemplateEngine;
+use SilverStripe\View\ViewLayerData;
 use SilverStripe\i18n\i18n;
 
 class MetaTagsExtension extends Extension
@@ -85,7 +86,7 @@ class MetaTagsExtension extends Extension
         return $fields;
     }
 
-    public function updateCMSFields(FieldList $fields)
+    protected function updateCMSFields(FieldList $fields)
     {
         self::prepare_cms_fields($fields, self::TAB_NAME, $this->owner);
     }
@@ -110,10 +111,10 @@ class MetaTagsExtension extends Extension
             $titleTemplate = $titlesByPagetype[$this->owner->ClassName];
         }
 
-        $template = SSViewer::fromString($titleTemplate);
-        $title = $this->owner->renderWith($template);
-
-        // $cc = new ContentController($this->owner);
+        $title = SSTemplateEngine::create()->renderString(
+            $titleTemplate,
+            new ViewLayerData($this->owner)
+        );
 
         return $this->owner
             ->customise([

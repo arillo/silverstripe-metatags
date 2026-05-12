@@ -10,9 +10,13 @@ The module will add a `$MetaImage` to each page and a fallback `$MetaImage` to t
 
 ### Requirements
 
-SilverStripe CMS ^4.0
+| CMS version | Branch / version |
+| --- | --- |
+| SilverStripe CMS ^6 | `master` (3.x-dev) — you are here |
+| SilverStripe CMS ^4 \|\| ^5 | [`2.x`](https://github.com/arillo/silverstripe-metatags/tree/2.x) |
+| SilverStripe CMS ^3 | [`1.x`](https://github.com/arillo/silverstripe-metatags/tree/1.x) |
 
-For a SilverStripe 3.x compatible version of this module, please see the [1 branch, or 0.x release line](https://github.com/arillo/silverstripe-metatags/tree/1.x).
+PHP ^8.3 required for the SS6 master line.
 
 ## Usage
 
