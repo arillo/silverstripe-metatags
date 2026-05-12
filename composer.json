@@ -18,6 +18,11 @@
     "extra": {
         "installer-name": "metatags"
     },
+    "require": {
+        "php": "^7.4 || ^8",
+        "silverstripe/framework": "^4 || ^5",
+        "silverstripe/cms": "^4 || ^5"
+    },
     "autoload": {
         "psr-4": {
             "Arillo\\MetaTags\\": "src/"
